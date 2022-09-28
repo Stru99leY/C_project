@@ -5,9 +5,9 @@ int main(int argc, char const *argv[])
     int tag = 0, sum = 0;
     for (int i = 9; i < 500; i++)
     {
-        tag = 0;
+        tag = 0;//判断是否为素数
         for (int k = 2; k < i; k++)
-        { //大于1且小于自身因素判断
+        { //大于1且小于自身因数判断
             if (i % k == 0)
             {
                 tag = 1; //标记变量若进入该语句说明不是素数
