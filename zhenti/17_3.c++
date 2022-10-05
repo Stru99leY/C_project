@@ -2,6 +2,7 @@
 /*
 可能是我的理解有误，我发现不管多少人围成一个圈，最后剩下的绝对是2号
 */
+//这个完全错了，QAQ
 #include <stdio.h>
 #include <stdlib.h>
 #define N 10
@@ -47,22 +48,24 @@ int main(int argc, char const *argv[])
     Lnode *L;
     buildLonde(L);
     disp(L);
-    Lnode *p=L->next,*q;
+    Lnode *p=L->next,*q=L;
     for (int i = 0; i < ren; i++)
     {
-        p=p->next;
-        cnt++;
-        if (cnt%3==0)
+        if (cnt==2)
         {
-            p=p->next->next;//数到三提出那个人
+            q->next=p->next;//数到三提出那个人
+            p=p->next;
+            cnt=0;
         }
-        if (p->next==p->next)//当只剩一个人时
+        if (q->next==q)//当只剩一个人时
         {
-            q=p;
             break;
         }
+        p=p->next;
+        q=q->next;
+        cnt++;
         
     }
-    printf("最后剩的那个人的编号是%d",p->data);
+    printf("最后剩的那个人的编号是%d",q->data);
     return 0;
 }
