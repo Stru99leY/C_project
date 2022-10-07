@@ -1,4 +1,4 @@
-//杨辉三角<10行>
+//杨辉三角<前10行>
 #include <stdio.h>
 #define N 11
 int main(int argc, char const *argv[])
