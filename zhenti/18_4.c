@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     int sum=1;//最后一天的桃子数目
     for (int i = 0; i < 10; i++)
     {
-        sum=sum*2+1;//逆向向上计算每天多2倍+1个
+        sum=(sum+1)*2;//逆向向上计算每天多+1个*2倍
     }
     printf("%d",sum);
     
