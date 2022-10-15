@@ -15,12 +15,12 @@ int func(int i)
 }
 int main(int argc, char const *argv[])
 {
-    int sum = 0;
-    int n;
-    for (n = 1; sum < 20000; n++)
+    int sum = 1;//sum初始值应该为1，s1为1，初始应该为1
+    int cnt=0;//计数
+    for (int n = 2; sum < 20000; n++,cnt++)
     {
         sum += func(n); //累加每个s的值
     }
-    printf("%d", n);
+    printf("%d", cnt);
     return 0;
 }
